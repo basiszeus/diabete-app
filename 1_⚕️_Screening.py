@@ -74,9 +74,9 @@ user_result = Diabete.predict(user_data)
 st.subheader('Your Report: ')
 output = ''
 if user_result[0] == 0:
-    output = 'You are not Diabetic'
+    output = 'You are probably not Diabetic'
 else:
-    output = 'You are Diabetic'
+    output = 'You are probably Diabetic, please consult your medical doctor'
 st.title(output)
 
 st.subheader('Accuracy: ')
@@ -88,7 +88,7 @@ st.bar_chart(df)
 
 # COLOR FUNCTION
 if user_result[0] == 0:
-    color = 'blue'
+    color = 'green'
 else:
     color = 'red'
 
